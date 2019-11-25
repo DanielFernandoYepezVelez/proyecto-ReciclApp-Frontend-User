@@ -26,9 +26,9 @@ class Register extends React.Component{
     }
 
     async componentDidMount() {
-        const responseTypeDocuments = await axios.get('http://localhost:4000/api/registerUser/typeDocuments');
-        const responseNeighborhoods = await axios.get('http://localhost:4000/api/registerUser/neighborhoods');
-        const responseTypeHouses = await axios.get('http://localhost:4000/api/registerUser/houses');
+        const responseTypeDocuments = await axios.get('https://proyecto-reciclapp-backend.herokuapp.com/api/registerUser/typeDocuments');
+        const responseNeighborhoods = await axios.get('https://proyecto-reciclapp-backend.herokuapp.com/api/registerUser/neighborhoods');
+        const responseTypeHouses = await axios.get('https://proyecto-reciclapp-backend.herokuapp.com/api/registerUser/houses');
 
         this.setState({
             typeDocuments: responseTypeDocuments.data.documents,
@@ -73,7 +73,7 @@ class Register extends React.Component{
             addressHome: '',
             membersHome: ''
         });
-        await axios.post('http://localhost:4000/api/registerUser/createUser', tableUsers);        
+        await axios.post('https://proyecto-reciclapp-backend.herokuapp.com/api/registerUser/createUser', tableUsers);        
     }
 
     onClick = (eventObject) => {

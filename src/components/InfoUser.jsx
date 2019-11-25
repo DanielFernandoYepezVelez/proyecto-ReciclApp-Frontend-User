@@ -36,7 +36,7 @@ class InfoUser extends React.Component{
       return this.props.history.push('/login');
     }
 
-    axios.get('http://localhost:4000/api/information/infoUser', {
+    axios.get('https://proyecto-reciclapp-backend.herokuapp.com/api/information/infoUser', {
       headers: {
         token: `${token}`
       },
